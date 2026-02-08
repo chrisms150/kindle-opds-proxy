@@ -11,13 +11,11 @@ _A Flask-based proxy server that converts EPUB books from OPDS feeds to MOBI for
 ![Python](https://img.shields.io/badge/python-3.11-blue?style=for-the-badge&logo=python)
 ![Flask](https://img.shields.io/badge/flask-latest-black?style=for-the-badge&logo=flask)
 ![Docker](https://img.shields.io/badge/docker-ready-blue?style=for-the-badge&logo=docker)
-![License](https://img.shields.io/github/license/chrisms150/kindle-opds-proxy?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
 </div>
 
 ---
-
-This service provides a web interface for browsing OPDS catalogs and automatically converts downloaded EPUB files to Kindle-compatible MOBI format using Calibre.
 
 ## Important Compatibility Notes
 
