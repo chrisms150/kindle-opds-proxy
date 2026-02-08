@@ -19,7 +19,7 @@ _A Flask-based proxy server that converts EPUB books from OPDS feeds to MOBI for
 
 ## Important Compatibility Notes
 
-- **This project has only been tested with [Booklore](https://www.booklore.app/) OPDS feeds**
+- **This project has only been tested with [Booklore](https://github.com/booklore-app/BookLore) OPDS feeds**
 - **Tested exclusively on Kindle devices from 2013**
 - Compatibility with other OPDS providers or newer/older Kindle models is not guaranteed
 
