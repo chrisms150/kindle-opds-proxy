@@ -12,27 +12,41 @@
   ],
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "matchCurrentVersion": "!/^0/",
       "automerge": true
     },
     {
       "groupName": "Python dependencies",
-      "matchManagers": ["pip_requirements"],
-      "matchUpdateTypes": ["patch", "minor"]
+      "matchManagers": [
+        "pip_requirements"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ]
     },
     {
       "groupName": "GitHub Actions",
-      "matchManagers": ["github-actions"],
+      "matchManagers": [
+        "github-actions"
+      ],
       "automerge": true,
       "automergeType": "pr"
     }
   ],
   "pip_requirements": {
-    "fileMatch": ["^requirements\\.txt$"]
+    "managerFilePatterns": [
+      "/^requirements\\.txt$/"
+    ]
   },
   "vulnerabilityAlerts": {
-    "labels": ["security"],
+    "labels": [
+      "security"
+    ],
     "automerge": true
   }
 }
