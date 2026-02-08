@@ -14,8 +14,7 @@ app = Flask(__name__)
 CACHE_FOLDER = "cache"
 
 # Ensure cache folder exists
-if not os.path.exists(CACHE_FOLDER):
-    os.makedirs(CACHE_FOLDER)
+os.makedirs(CACHE_FOLDER, exist_ok=True)
 
 opds_url = os.getenv('OPDS_URL')
 opds_urlParsed = urllib.parse.urlsplit(opds_url)
