@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.14-slim
 
 LABEL org.opencontainers.image.description="A Flask-based proxy server that converts EPUB books from OPDS feeds to MOBI format for Kindle devices"
 
