@@ -10,6 +10,14 @@
   "labels": [
     "dependencies"
   ],
+  "reviewers": [
+    "1Solon",
+    "chrisms150"
+  ],
+  "assignees": [
+    "1Solon",
+    "chrisms150"
+  ],
   "packageRules": [
     {
       "matchUpdateTypes": [
