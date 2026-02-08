@@ -8,9 +8,8 @@ _A Flask-based proxy server that converts EPUB books from OPDS feeds to MOBI for
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/python-3.11-blue?style=for-the-badge&logo=python)
+![Python](https://img.shields.io/badge/python-3.14-blue?style=for-the-badge&logo=python)
 ![Flask](https://img.shields.io/badge/flask-latest-black?style=for-the-badge&logo=flask)
-![Docker](https://img.shields.io/badge/docker-ready-blue?style=for-the-badge&logo=docker)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 ![Build](https://img.shields.io/github/actions/workflow/status/chrisms150/kindle-opds-proxy/docker-release.yml?style=for-the-badge&logo=github)
 
