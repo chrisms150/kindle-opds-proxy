@@ -12,6 +12,7 @@ _A Flask-based proxy server that converts EPUB books from OPDS feeds to MOBI for
 ![Flask](https://img.shields.io/badge/flask-latest-black?style=for-the-badge&logo=flask)
 ![Docker](https://img.shields.io/badge/docker-ready-blue?style=for-the-badge&logo=docker)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+![Build](https://img.shields.io/github/actions/workflow/status/chrisms150/kindle-opds-proxy/docker-release.yml?style=for-the-badge&logo=github)
 
 </div>
 
@@ -47,6 +48,8 @@ _A Flask-based proxy server that converts EPUB books from OPDS feeds to MOBI for
 
 ## Quick Start with Docker Run
 
+Using the pre-built image from GitHub Container Registry:
+
 ```bash
 docker run -d \
   -p 5000:5000 \
@@ -54,10 +57,17 @@ docker run -d \
   -e OPDS_USER="YourUsername" \
   -e OPDS_PASSWORD="YourPassword" \
   --name kindle-opds-proxy \
-  kindle-opds-proxy
+  ghcr.io/chrisms150/kindle-opds-proxy:latest
 ```
 
 Access the service at `http://localhost:5000` or `http://YOUR_SERVER_IP:5000`
+
+### Available Tags
+
+- `latest` - Latest release
+- `v1.0.0` - Specific version (semver)
+- `v1.0` - Minor version
+- `v1` - Major version
 
 ## Docker Compose Example
 
@@ -68,7 +78,7 @@ version: "3.8"
 
 services:
   kindle-opds-proxy:
-    build: .
+    image: ghcr.io/chrisms150/kindle-opds-proxy:latest
     container_name: kindle-opds-proxy
     ports:
       - "5000:5000"
@@ -144,6 +154,22 @@ If you prefer to run without Docker:
    ```bash
    python server.py
    ```
+
+## Release Process
+
+Docker images are automatically built and published to GitHub Container Registry when a new release is created:
+
+1. Create a new release with a semantic version tag (e.g., `v1.0.0`)
+2. GitHub Actions will automatically:
+   - Build the Docker image for `linux/amd64` and `linux/arm64` platforms
+   - Tag it with the release version and `latest`
+   - Push it to `ghcr.io/chrisms150/kindle-opds-proxy`
+
+The workflow creates the following tags:
+- `ghcr.io/chrisms150/kindle-opds-proxy:latest`
+- `ghcr.io/chrisms150/kindle-opds-proxy:v1.0.0` (exact version)
+- `ghcr.io/chrisms150/kindle-opds-proxy:v1.0` (minor version)
+- `ghcr.io/chrisms150/kindle-opds-proxy:v1` (major version)
 
 ## License
 
