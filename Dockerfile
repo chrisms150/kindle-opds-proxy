@@ -1,4 +1,4 @@
-FROM python:3.14
+FROM python:3.15
 LABEL org.opencontainers.image.description="A Flask-based proxy server that converts EPUB books from OPDS feeds to MOBI format for Kindle devices"
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
